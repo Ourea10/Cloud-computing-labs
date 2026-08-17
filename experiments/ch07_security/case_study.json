@@ -1,0 +1,41 @@
+{
+    "system": "Cloud Lab API",
+    "assets": [
+        {
+            "name": "API",
+            "type": "application",
+            "confidentiality": 3,
+            "integrity": 5,
+            "availability": 5
+        },
+        {
+            "name": "PostgreSQL",
+            "type": "database",
+            "confidentiality": 5,
+            "integrity": 5,
+            "availability": 4
+        },
+        {
+            "name": "Tenant Resources",
+            "type": "cloud_resource",
+            "confidentiality": 5,
+            "integrity": 5,
+            "availability": 4
+        }
+    ],
+    "trust_boundaries": [
+        "Internet -> API",
+        "API -> PostgreSQL",
+        "Tenant A -> Tenant B",
+        "Container -> Host"
+    ],
+    "threats": [
+        "brute_force",
+        "insufficient_authorization",
+        "sql_injection",
+        "denial_of_service",
+        "containerization_attack",
+        "privilege_escalation",
+        "remote_code_execution"
+    ]
+}

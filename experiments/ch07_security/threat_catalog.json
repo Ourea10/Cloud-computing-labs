@@ -1,0 +1,70 @@
+{
+    "traffic_eavesdropping": {
+        "category": "network",
+        "description": "An attacker observes network traffic to obtain sensitive information."
+    },
+    "malicious_intermediary": {
+        "category": "network",
+        "description": "An attacker positions itself between communicating parties."
+    },
+    "denial_of_service": {
+        "category": "availability",
+        "description": "An attacker consumes resources so legitimate users cannot access the service."
+    },
+    "insufficient_authorization": {
+        "category": "authorization",
+        "description": "An authenticated user accesses resources beyond the permissions granted to that identity."
+    },
+    "virtualization_attack": {
+        "category": "virtualization",
+        "description": "An attack targets virtualization boundaries or virtual machine infrastructure."
+    },
+    "overlapping_trust_boundaries": {
+        "category": "authorization",
+        "description": "A weakness exists because multiple trust boundaries overlap incorrectly."
+    },
+    "containerization_attack": {
+        "category": "containerization",
+        "description": "An attacker abuses a weakness in container isolation or configuration."
+    },
+    "malware": {
+        "category": "application",
+        "description": "Malicious software executes inside or against the environment."
+    },
+    "insider_threat": {
+        "category": "human",
+        "description": "A trusted person abuses legitimate access."
+    },
+    "social_engineering": {
+        "category": "human",
+        "description": "An attacker manipulates people into revealing information or performing unsafe actions."
+    },
+    "botnet": {
+        "category": "availability",
+        "description": "A coordinated set of compromised systems is used to perform attacks."
+    },
+    "privilege_escalation": {
+        "category": "authorization",
+        "description": "An attacker obtains privileges beyond those initially granted."
+    },
+    "brute_force": {
+        "category": "authorization",
+        "description": "An attacker repeatedly attempts credentials or authentication values."
+    },
+    "remote_code_execution": {
+        "category": "application",
+        "description": "An attacker causes arbitrary code to execute remotely."
+    },
+    "sql_injection": {
+        "category": "application",
+        "description": "Untrusted input changes the intended meaning of a database query."
+    },
+    "tunneling": {
+        "category": "network",
+        "description": "A communication channel is hidden or encapsulated inside another protocol."
+    },
+    "advanced_persistent_threat": {
+        "category": "persistence",
+        "description": "A capable attacker maintains a long-term presence in an environment."
+    }
+}
