@@ -26,6 +26,9 @@ testpaths = [
     "apps",
     "experiments",
 ]
+pythonpath = [
+    "apps/api",
+]
 
 [tool.ruff]
 line-length = 100
