@@ -1,0 +1,11 @@
+public:
+  description: "Infrastructure operated for broad public consumption."
+
+private:
+  description: "Infrastructure dedicated to a single organization."
+
+hybrid:
+  description: "Combination of multiple cloud environments."
+
+multicloud:
+  description: "Use of services from multiple cloud providers."
