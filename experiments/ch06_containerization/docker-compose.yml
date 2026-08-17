@@ -1,0 +1,31 @@
+services:
+
+  api:
+    build:
+      context: ../..
+      dockerfile: apps/api/Dockerfile
+    container_name: cloud-lab-api
+    ports:
+      - "8000:8000"
+    environment:
+      APP_ENV: container
+      DATABASE_HOST: postgres
+      DATABASE_PORT: 5432
+      DATABASE_NAME: cloudlab
+      DATABASE_USER: cloudlab
+      DATABASE_PASSWORD: cloudlab
+    depends_on:
+      - postgres
+
+  postgres:
+    image: postgres:16
+    container_name: cloud-lab-postgres
+    environment:
+      POSTGRES_DB: cloudlab
+      POSTGRES_USER: cloudlab
+      POSTGRES_PASSWORD: cloudlab
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
