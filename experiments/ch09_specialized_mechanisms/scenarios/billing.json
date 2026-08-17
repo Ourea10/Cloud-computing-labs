@@ -1,0 +1,37 @@
+{
+    "pricing": [
+        {
+            "resource_type": "vcpu_hour",
+            "unit": "vcpu-hour",
+            "price_per_unit": 0.02
+        },
+        {
+            "resource_type": "memory_gb_hour",
+            "unit": "gb-hour",
+            "price_per_unit": 0.01
+        },
+        {
+            "resource_type": "storage_gb_month",
+            "unit": "gb-month",
+            "price_per_unit": 0.005
+        }
+    ],
+    "tenant": "tenant-a",
+    "usage": [
+        {
+            "resource_id": "server-001",
+            "resource_type": "vcpu_hour",
+            "quantity": 10
+        },
+        {
+            "resource_id": "server-001",
+            "resource_type": "memory_gb_hour",
+            "quantity": 20
+        },
+        {
+            "resource_id": "volume-001",
+            "resource_type": "storage_gb_month",
+            "quantity": 50
+        }
+    ]
+}
