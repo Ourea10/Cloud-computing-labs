@@ -1,0 +1,24 @@
+{
+    "active_passive": {
+        "primary": {
+            "resource_id": "server-primary",
+            "address": "10.0.0.1"
+        },
+        "secondary": {
+            "resource_id": "server-secondary",
+            "address": "10.0.0.2"
+        },
+        "failure": "server-primary",
+        "expected_active": "server-secondary"
+    },
+    "active_active": {
+        "resources": [
+            "server-a",
+            "server-b"
+        ],
+        "failure": "server-a",
+        "expected_remaining_active": [
+            "server-b"
+        ]
+    }
+}

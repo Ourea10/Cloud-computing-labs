@@ -8,6 +8,10 @@ from app.infrastructure_routes import (
     router as infrastructure_router,
 )
 
+from app.specialized_routes import (
+    router as specialized_router,
+)
+
 app = FastAPI(
     title="Cloud Computing Lab API",
     version="0.1.0",
@@ -21,4 +25,8 @@ app.include_router(
 
 app.include_router(
     infrastructure_router
+)
+
+app.include_router(
+    specialized_router
 )

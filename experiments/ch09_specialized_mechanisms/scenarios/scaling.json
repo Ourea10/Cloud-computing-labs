@@ -1,0 +1,23 @@
+{
+    "resource_group": "api",
+    "policy": {
+        "min_instances": 2,
+        "max_instances": 5,
+        "scale_out_threshold": 70,
+        "scale_in_threshold": 30
+    },
+    "observations": [
+        {
+            "cpu_percent": 25,
+            "expected_action": "scale_in"
+        },
+        {
+            "cpu_percent": 50,
+            "expected_action": "none"
+        },
+        {
+            "cpu_percent": 85,
+            "expected_action": "scale_out"
+        }
+    ]
+}

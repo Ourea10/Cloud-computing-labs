@@ -1,0 +1,28 @@
+{
+    "service": "cloud-lab-api",
+    "backends": [
+        {
+            "resource_id": "server-001",
+            "address": "10.0.0.1",
+            "port": 8000
+        },
+        {
+            "resource_id": "server-002",
+            "address": "10.0.0.2",
+            "port": 8000
+        },
+        {
+            "resource_id": "server-003",
+            "address": "10.0.0.3",
+            "port": 8000
+        }
+    ],
+    "algorithm": "round_robin",
+    "failure_test": {
+        "failed_backend": "server-002",
+        "expected": [
+            "server-001",
+            "server-003"
+        ]
+    }
+}
