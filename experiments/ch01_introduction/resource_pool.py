@@ -1,4 +1,4 @@
-from resource import ComputeResource
+from .resource import ComputeResource
 
 
 class ResourcePool:
