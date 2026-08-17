@@ -1,0 +1,41 @@
+{
+    "ATN": {
+        "name": "ATN",
+        "resource_requirements": {
+            "cpu": 4,
+            "memory": 8192
+        },
+        "desired_instances": 2,
+        "characteristics": [
+            "requires shared infrastructure",
+            "requires scalable resources",
+            "requires availability"
+        ]
+    },
+    "DTGOV": {
+        "name": "DTGOV",
+        "resource_requirements": {
+            "cpu": 8,
+            "memory": 16384
+        },
+        "desired_instances": 3,
+        "characteristics": [
+            "requires controlled infrastructure",
+            "requires resource management",
+            "requires reliability"
+        ]
+    },
+    "Innovartus": {
+        "name": "Innovartus Technologies Inc.",
+        "resource_requirements": {
+            "cpu": 2,
+            "memory": 4096
+        },
+        "desired_instances": 4,
+        "characteristics": [
+            "requires agility",
+            "requires scalable services",
+            "requires automation"
+        ]
+    }
+}

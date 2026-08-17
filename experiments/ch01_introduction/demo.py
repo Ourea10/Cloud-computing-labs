@@ -1,5 +1,5 @@
-from resource import ComputeResource
-from resource_pool import ResourcePool
+from .resource import ComputeResource
+from .resource_pool import ResourcePool
 
 
 def main():
