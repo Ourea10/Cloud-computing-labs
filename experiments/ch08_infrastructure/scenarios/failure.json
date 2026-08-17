@@ -1,0 +1,30 @@
+{
+    "host": {
+        "host_id": "host-001",
+        "cpu": 16,
+        "memory_mb": 32768
+    },
+    "servers": [
+        {
+            "server_id": "server-001",
+            "cpu": 8,
+            "memory_mb": 16384
+        },
+        {
+            "server_id": "server-002",
+            "cpu": 8,
+            "memory_mb": 16384
+        }
+    ],
+    "failure": {
+        "type": "host_failure",
+        "resource": "host-001"
+    },
+    "expected_behavior": {
+        "servers_affected": [
+            "server-001",
+            "server-002"
+        ],
+        "replication_required": true
+    }
+}
