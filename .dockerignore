@@ -1,0 +1,10 @@
+.git/
+.codex/
+.agents/
+venv/
+.venv/
+__pycache__/
+*.pyc
+experiments/
+infastructure/
+apps/api/app/tests/

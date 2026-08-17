@@ -9,7 +9,7 @@ RUN pip install --no-cache-dir \
     "uvicorn[standard]" \
     pydantic-settings
 
-COPY app ./app
+COPY apps/api/app ./app
 
 EXPOSE 8000
 
