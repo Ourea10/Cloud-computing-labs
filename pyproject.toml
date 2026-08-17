@@ -28,6 +28,7 @@ testpaths = [
 ]
 pythonpath = [
     "apps/api",
+    ".",
 ]
 
 [tool.ruff]

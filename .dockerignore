@@ -5,6 +5,10 @@ venv/
 .venv/
 __pycache__/
 *.pyc
-experiments/
+experiments/*
+!experiments/
+!experiments/__init__.py
+!experiments/ch08_infrastructure/
+!experiments/ch08_infrastructure/**
 infastructure/
 apps/api/app/tests/

@@ -1,0 +1,65 @@
+{
+    "cloud": {
+        "name": "cloud-lab",
+        "physical_hosts": [
+            {
+                "host_id": "host-001",
+                "cpu": 16,
+                "memory_mb": 32768
+            }
+        ]
+    },
+    "network": {
+        "name": "cloud-lab-public",
+        "rules": [
+            {
+                "protocol": "tcp",
+                "port": 443,
+                "source": "0.0.0.0/0",
+                "action": "allow"
+            },
+            {
+                "protocol": "tcp",
+                "port": 22,
+                "source": "10.0.0.0/24",
+                "action": "allow"
+            }
+        ]
+    },
+    "tenants": [
+        {
+            "tenant_id": "tenant-a",
+            "servers": [
+                {
+                    "server_id": "server-a-001",
+                    "cpu": 2,
+                    "memory_mb": 2048,
+                    "image": "ubuntu:24.04"
+                }
+            ],
+            "storage": [
+                {
+                    "volume_id": "volume-a-001",
+                    "size_gb": 20
+                }
+            ]
+        },
+        {
+            "tenant_id": "tenant-b",
+            "servers": [
+                {
+                    "server_id": "server-b-001",
+                    "cpu": 4,
+                    "memory_mb": 4096,
+                    "image": "ubuntu:24.04"
+                }
+            ],
+            "storage": [
+                {
+                    "volume_id": "volume-b-001",
+                    "size_gb": 50
+                }
+            ]
+        }
+    ]
+}

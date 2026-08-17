@@ -10,6 +10,8 @@ RUN pip install --no-cache-dir \
     pydantic-settings
 
 COPY apps/api/app ./app
+COPY experiments/__init__.py ./experiments/__init__.py
+COPY experiments/ch08_infrastructure ./experiments/ch08_infrastructure
 
 EXPOSE 8000
 
