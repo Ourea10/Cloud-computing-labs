@@ -1,0 +1,22 @@
+{
+    "users": [
+        {
+            "user_id": "user-001",
+            "username": "alice",
+            "role": "customer",
+            "password": "AlicePassword123!"
+        },
+        {
+            "user_id": "user-002",
+            "username": "admin",
+            "role": "admin",
+            "password": "AdminPassword123!"
+        },
+        {
+            "user_id": "user-003",
+            "username": "auditor",
+            "role": "auditor",
+            "password": "AuditorPassword123!"
+        }
+    ]
+}
