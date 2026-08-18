@@ -1,0 +1,6 @@
+{
+    "resource": "customer-data",
+    "retention_days": 30,
+    "frequency": "daily",
+    "encryption": true
+}

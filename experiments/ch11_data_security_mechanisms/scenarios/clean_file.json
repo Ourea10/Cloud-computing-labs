@@ -1,0 +1,7 @@
+{
+    "file_id": "file-001",
+    "name": "report.txt",
+    "content": "Quarterly cloud report",
+    "owner": "alice",
+    "classification": "internal"
+}

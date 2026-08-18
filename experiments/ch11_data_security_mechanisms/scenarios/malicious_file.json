@@ -1,0 +1,7 @@
+{
+    "file_id": "file-002",
+    "name": "malware.bin",
+    "content": "EICAR_TEST_SIGNATURE",
+    "owner": "attacker",
+    "classification": "restricted"
+}

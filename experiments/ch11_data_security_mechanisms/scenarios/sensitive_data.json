@@ -1,0 +1,7 @@
+{
+    "file_id": "file-003",
+    "name": "customer-data.csv",
+    "content": "customer_id,name,email",
+    "owner": "alice",
+    "classification": "confidential"
+}

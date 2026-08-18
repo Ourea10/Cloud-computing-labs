@@ -1,0 +1,7 @@
+{
+    "source_ip": "203.0.113.50",
+    "destination_ip": "10.0.1.20",
+    "destination_port": 443,
+    "bytes_transferred": 500000000,
+    "protocol": "https"
+}
