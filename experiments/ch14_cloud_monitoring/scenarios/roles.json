@@ -1,0 +1,36 @@
+{
+    "roles": [
+        {
+            "name": "admin",
+            "permissions": [
+                "resource:create",
+                "resource:read",
+                "resource:delete",
+                "billing:read",
+                "security:manage",
+                "audit:read",
+                "monitoring:read",
+                "monitoring:configure",
+                "monitoring:manage"
+            ]
+        },
+        {
+            "name": "customer",
+            "permissions": [
+                "resource:create",
+                "resource:read",
+                "billing:read",
+                "monitoring:read"
+            ]
+        },
+        {
+            "name": "auditor",
+            "permissions": [
+                "resource:read",
+                "billing:read",
+                "audit:read",
+                "monitoring:read"
+            ]
+        }
+    ]
+}

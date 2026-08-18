@@ -1,0 +1,31 @@
+{
+    "rules": [
+        {
+            "rule_id": "cpu-warning",
+            "resource_id": null,
+            "metric_type": "cpu",
+            "operator": ">=",
+            "threshold": 80,
+            "severity": "warning",
+            "message": "CPU usage exceeded warning threshold"
+        },
+        {
+            "rule_id": "cpu-critical",
+            "resource_id": null,
+            "metric_type": "cpu",
+            "operator": ">=",
+            "threshold": 95,
+            "severity": "critical",
+            "message": "CPU usage reached critical threshold"
+        },
+        {
+            "rule_id": "memory-warning",
+            "resource_id": null,
+            "metric_type": "memory",
+            "operator": ">=",
+            "threshold": 80,
+            "severity": "warning",
+            "message": "Memory usage exceeded warning threshold"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+{
+    "resources": [
+        {
+            "resource_id": "vm-001",
+            "name": "application-server",
+            "type": "vm",
+            "status": "running"
+        },
+        {
+            "resource_id": "vm-002",
+            "name": "database-server",
+            "type": "vm",
+            "status": "running"
+        },
+        {
+            "resource_id": "vm-003",
+            "name": "worker-server",
+            "type": "vm",
+            "status": "running"
+        }
+    ]
+}
