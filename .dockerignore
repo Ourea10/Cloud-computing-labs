@@ -10,5 +10,7 @@ experiments/*
 !experiments/__init__.py
 !experiments/ch08_infrastructure/
 !experiments/ch08_infrastructure/**
+!experiments/ch09_specialized_mechanisms/
+!experiments/ch09_specialized_mechanisms/**
 infastructure/
 apps/api/app/tests/

@@ -1,0 +1,8 @@
+{
+    "algorithm": "Fernet",
+    "purpose": "protect sensitive cloud configuration",
+    "data": {
+        "database_password": "super-secret",
+        "api_key": "lab-api-key"
+    }
+}

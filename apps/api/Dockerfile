@@ -12,6 +12,7 @@ RUN pip install --no-cache-dir \
 COPY apps/api/app ./app
 COPY experiments/__init__.py ./experiments/__init__.py
 COPY experiments/ch08_infrastructure ./experiments/ch08_infrastructure
+COPY experiments/ch09_specialized_mechanisms ./experiments/ch09_specialized_mechanisms
 
 EXPOSE 8000
 
