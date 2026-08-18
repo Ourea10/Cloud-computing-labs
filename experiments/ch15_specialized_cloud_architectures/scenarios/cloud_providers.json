@@ -1,0 +1,37 @@
+{
+    "providers": [
+        {
+            "provider_id": "aws",
+            "name": "AWS",
+            "region": "ap-southeast-1",
+            "services": [
+                "compute",
+                "storage",
+                "database"
+            ],
+            "status": "available"
+        },
+        {
+            "provider_id": "azure",
+            "name": "Azure",
+            "region": "southeast-asia",
+            "services": [
+                "compute",
+                "storage",
+                "database"
+            ],
+            "status": "available"
+        },
+        {
+            "provider_id": "gcp",
+            "name": "Google Cloud",
+            "region": "asia-southeast1",
+            "services": [
+                "compute",
+                "storage",
+                "database"
+            ],
+            "status": "available"
+        }
+    ]
+}

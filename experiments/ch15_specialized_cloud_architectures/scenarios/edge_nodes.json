@@ -1,0 +1,30 @@
+{
+    "edge_nodes": [
+        {
+            "node_id": "edge-001",
+            "name": "factory-edge-01",
+            "location": "factory-a",
+            "capabilities": [
+                "camera-processing",
+                "sensor-processing"
+            ],
+            "connected_devices": [
+                "camera-001",
+                "sensor-001"
+            ]
+        },
+        {
+            "node_id": "edge-002",
+            "name": "factory-edge-02",
+            "location": "factory-b",
+            "capabilities": [
+                "camera-processing",
+                "sensor-processing"
+            ],
+            "connected_devices": [
+                "camera-002",
+                "sensor-002"
+            ]
+        }
+    ]
+}

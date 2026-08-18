@@ -1,0 +1,20 @@
+{
+    "storage": [
+        {
+            "storage_id": "storage-001",
+            "name": "primary-storage",
+            "capacity_gb": 1000,
+            "used_gb": 300,
+            "lun_id": "lun-001",
+            "physical": false
+        },
+        {
+            "storage_id": "storage-002",
+            "name": "database-storage",
+            "capacity_gb": 2000,
+            "used_gb": 1500,
+            "lun_id": "lun-002",
+            "physical": true
+        }
+    ]
+}
