@@ -1,0 +1,12 @@
+{
+    "policies": [
+        {
+            "sla_id": "sla-001",
+            "customer_id": "alice",
+            "resource_id": "web-server",
+            "availability_target": 0.999,
+            "response_time_target_ms": 300,
+            "monthly_price": 100.0
+        }
+    ]
+}

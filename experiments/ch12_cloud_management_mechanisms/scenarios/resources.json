@@ -1,0 +1,21 @@
+{
+    "quotas": [
+        {
+            "owner_id": "alice",
+            "max_cpu": 16,
+            "max_memory_gb": 32,
+            "max_storage_gb": 500
+        }
+    ],
+    "resources": [
+        {
+            "owner_id": "alice",
+            "resource_type": "vm",
+            "name": "web-server",
+            "cpu": 4,
+            "memory_gb": 8,
+            "storage_gb": 100,
+            "region": "local"
+        }
+    ]
+}
