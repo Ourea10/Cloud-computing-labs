@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: "2010-09-09"
+
+Description: >
+  Chapter 17 Cloud Learning Platform
+
+Resources:
+
+  ApplicationBucket:
+    Type: AWS::S3::Bucket
+
+  MetricsQueue:
+    Type: AWS::SQS::Queue
+
+Outputs:
+
+  ApplicationBucketName:
+    Value: !Ref ApplicationBucket
+
+  MetricsQueueUrl:
+    Value: !Ref MetricsQueue

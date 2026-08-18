@@ -1,0 +1,14 @@
+[
+    {
+        "id": "project-001",
+        "owner_id": "user-001",
+        "name": "ecommerce",
+        "description": "E-commerce cloud platform"
+    },
+    {
+        "id": "project-002",
+        "owner_id": "user-001",
+        "name": "analytics",
+        "description": "Analytics workload"
+    }
+]

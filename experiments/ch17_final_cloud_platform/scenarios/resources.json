@@ -1,0 +1,23 @@
+[
+    {
+        "id": "resource-001",
+        "project_id": "project-001",
+        "name": "api-server",
+        "resource_type": "compute",
+        "status": "running"
+    },
+    {
+        "id": "resource-002",
+        "project_id": "project-001",
+        "name": "product-images",
+        "resource_type": "storage",
+        "status": "available"
+    },
+    {
+        "id": "resource-003",
+        "project_id": "project-001",
+        "name": "metrics-worker",
+        "resource_type": "worker",
+        "status": "running"
+    }
+]

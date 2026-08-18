@@ -1,0 +1,31 @@
+services:
+
+  api:
+    build:
+      context: ../..
+      dockerfile: experiments/ch17_final_cloud_platform/docker/Dockerfile
+
+    ports:
+      - "8000:8000"
+
+    environment:
+      ENVIRONMENT: development
+
+  postgres:
+    image: postgres:16
+
+    environment:
+      POSTGRES_USER: cloud
+      POSTGRES_PASSWORD: cloud
+      POSTGRES_DB: cloud
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+
+volumes:
+
+  postgres_data:

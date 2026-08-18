@@ -1,0 +1,34 @@
+                 USER
+                   │
+                   │ register
+                   ▼
+              Authentication
+                   │
+                   │ login
+                   ▼
+                PROJECT
+                   │
+                   │ create
+                   ▼
+               RESOURCE
+                   │
+                   │
+                   ▼
+                COMPUTE
+                   │
+                   │ metrics
+                   ▼
+                 QUEUE
+                   │
+                   ▼
+                WORKER
+                   │
+                   ▼
+              MONITORING
+                   │
+                   │ threshold exceeded
+                   ▼
+                 ALERT
+                   │
+                   ▼
+              AUDIT EVENT
