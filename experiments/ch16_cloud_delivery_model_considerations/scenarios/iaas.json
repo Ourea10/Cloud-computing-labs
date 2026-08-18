@@ -1,0 +1,16 @@
+{
+    "model": "iaas",
+    "provider_manages": [
+        "facility",
+        "network",
+        "storage",
+        "compute"
+    ],
+    "customer_manages": [
+        "operating_system",
+        "runtime",
+        "application",
+        "data",
+        "identity"
+    ]
+}

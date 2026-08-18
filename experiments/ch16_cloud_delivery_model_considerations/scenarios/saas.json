@@ -1,0 +1,17 @@
+{
+    "model": "saas",
+    "provider_manages": [
+        "facility",
+        "network",
+        "storage",
+        "compute",
+        "operating_system",
+        "runtime",
+        "database",
+        "application"
+    ],
+    "customer_manages": [
+        "data",
+        "identity"
+    ]
+}

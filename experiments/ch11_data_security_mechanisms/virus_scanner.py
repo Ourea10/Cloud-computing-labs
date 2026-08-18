@@ -8,7 +8,6 @@ from experiments.ch11_data_security_mechanisms.models import (
 
 from cryptography.fernet import Fernet
 
-
 class DecryptionService:
 
     def __init__(self):

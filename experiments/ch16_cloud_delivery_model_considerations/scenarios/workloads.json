@@ -1,0 +1,34 @@
+{
+    "workloads": [
+        {
+            "workload_id": "workload-001",
+            "name": "Legacy ERP",
+            "requires_os_control": true,
+            "requires_runtime_control": true,
+            "requires_application_control": true,
+            "operational_complexity": 7,
+            "scalability_requirement": 5,
+            "budget": 1000
+        },
+        {
+            "workload_id": "workload-002",
+            "name": "FastAPI Application",
+            "requires_os_control": false,
+            "requires_runtime_control": false,
+            "requires_application_control": true,
+            "operational_complexity": 6,
+            "scalability_requirement": 9,
+            "budget": 1000
+        },
+        {
+            "workload_id": "workload-003",
+            "name": "Email Collaboration",
+            "requires_os_control": false,
+            "requires_runtime_control": false,
+            "requires_application_control": false,
+            "operational_complexity": 9,
+            "scalability_requirement": 8,
+            "budget": 1000
+        }
+    ]
+}
