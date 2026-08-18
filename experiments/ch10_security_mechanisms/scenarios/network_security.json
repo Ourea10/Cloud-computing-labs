@@ -1,0 +1,22 @@
+{
+    "security_group": {
+        "id": "sg-api",
+        "rules": [
+            {
+                "protocol": "tcp",
+                "port": 443,
+                "source": "0.0.0.0/0",
+                "action": "allow"
+            },
+            {
+                "protocol": "tcp",
+                "port": 22,
+                "source": "10.0.0.0/24",
+                "action": "allow"
+            }
+        ]
+    },
+    "firewall": {
+        "default_action": "deny"
+    }
+}

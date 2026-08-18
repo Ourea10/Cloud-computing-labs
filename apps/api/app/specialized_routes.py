@@ -3,6 +3,7 @@ from fastapi import (
     Depends,
     HTTPException,
 )
+from pydantic import BaseModel, Field
 
 from app.security import (
     get_current_user,
@@ -13,15 +14,74 @@ from app.security_store import User
 from app.specialized import (
     audit_monitor,
     load_balancer,
-    pay_per_use,
     state_database,
 )
+
+from experiments.ch09_specialized_mechanisms.models import (
+    BackendTarget,
+    HealthStatus,
+)
+
+
+class AuditEventRequest(BaseModel):
+    action: str
+    resource_type: str
+    resource_id: str | None = None
+    success: bool = True
+    metadata: dict = Field(default_factory=dict)
+
+
+class LoadBalancerTargetRequest(BaseModel):
+    resource_id: str
+    address: str
+    port: int
+    health: HealthStatus = HealthStatus.UNKNOWN
 
 
 router = APIRouter(
     prefix="/specialized",
     tags=["specialized mechanisms"],
 )
+
+
+@router.post("/audit", status_code=201)
+def record_audit_event(
+    payload: AuditEventRequest,
+    current_user: User = Depends(get_current_user),
+):
+    event = audit_monitor.record(
+        actor=current_user.username,
+        tenant_id=current_user.tenant_id,
+        action=payload.action,
+        resource_type=payload.resource_type,
+        resource_id=payload.resource_id,
+        success=payload.success,
+        metadata=payload.metadata,
+    )
+
+    return event
+
+
+@router.post("/load-balancer/targets", status_code=201)
+def register_load_balancer_target(
+    payload: LoadBalancerTargetRequest,
+    current_user: User = Depends(get_current_user),
+):
+    target = BackendTarget(
+        resource_id=payload.resource_id,
+        address=payload.address,
+        port=payload.port,
+        health=payload.health,
+    )
+    load_balancer.register(target)
+
+    return {
+        "resource_id": target.resource_id,
+        "address": target.address,
+        "port": target.port,
+        "health": target.health,
+        "tenant_id": current_user.tenant_id,
+    }
 
 
 @router.get("/state/{resource_id}")

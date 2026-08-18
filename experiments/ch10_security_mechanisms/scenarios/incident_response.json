@@ -1,0 +1,10 @@
+{
+    "source_ip": "203.0.113.50",
+    "failed_login_attempts": 12,
+    "open_ports": [
+        22,
+        23,
+        443
+    ],
+    "resource_id": "server-001"
+}

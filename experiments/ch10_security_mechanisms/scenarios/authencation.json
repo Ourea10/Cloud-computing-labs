@@ -1,0 +1,19 @@
+{
+    "user": {
+        "id": "user-001",
+        "username": "alice",
+        "tenant_id": "tenant-a"
+    },
+    "role": {
+        "name": "developer",
+        "permissions": [
+            "server:read",
+            "server:start"
+        ]
+    },
+    "authentication": {
+        "password": "lab-password",
+        "mfa": true,
+        "sso": true
+    }
+}
