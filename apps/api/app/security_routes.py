@@ -1,20 +1,34 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 
-from app.security import create_lab_token, get_current_user
-from app.security_store import RESOURCES, User
+from app.security import (
+    create_lab_token,
+    get_current_user,
+)
+
+from app.security_store import (
+    RESOURCES,
+    User,
+)
 
 
-router = APIRouter(prefix="/security", tags=["security"])
+router = APIRouter(
+    prefix="/security",
+    tags=["security"],
+)
 
 
 @router.post("/token")
-def issue_token(username: str) -> dict[str, str]:
+def create_token(
+    username: str,
+):
     try:
-        token = create_lab_token(username)
+        token = create_lab_token(
+            username
+        )
     except ValueError as error:
         raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Unknown user",
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=str(error),
         ) from error
 
     return {
@@ -24,52 +38,45 @@ def issue_token(username: str) -> dict[str, str]:
 
 
 @router.get("/me")
-def current_user(user: User = Depends(get_current_user)) -> User:
-    return user
-
-
-@router.get("/resources")
-def tenant_resources(user: User = Depends(get_current_user)) -> list[dict[str, str]]:
-    if user.role == "admin":
-        resources = RESOURCES.values()
-    else:
-        resources = (
-            resource
-            for resource in RESOURCES.values()
-            if resource.tenant_id == user.tenant_id
-        )
-
-    return [
-        {
-            "resource_id": resource.resource_id,
-            "tenant_id": resource.tenant_id,
-            "name": resource.name,
-        }
-        for resource in resources
-    ]
+def get_me(
+    current_user: User = Depends(
+        get_current_user
+    ),
+):
+    return {
+        "user_id": current_user.user_id,
+        "username": current_user.username,
+        "tenant_id": current_user.tenant_id,
+        "role": current_user.role,
+    }
 
 
 @router.get("/resources/{resource_id}")
 def get_resource(
     resource_id: str,
-    user: User = Depends(get_current_user),
-) -> dict[str, str]:
-    resource = RESOURCES.get(resource_id)
+    current_user: User = Depends(
+        get_current_user
+    ),
+):
+
+    resource = RESOURCES.get(
+        resource_id
+    )
 
     if resource is None:
         raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
+            status_code=404,
             detail="Resource not found",
         )
 
-    if user.role != "admin" and resource.tenant_id != user.tenant_id:
+    if (
+        current_user.role != "admin"
+        and current_user.tenant_id
+        != resource.tenant_id
+    ):
         raise HTTPException(
-            status_code=status.HTTP_403_FORBIDDEN,
-            detail="Access to this resource is forbidden",
+            status_code=403,
+            detail="Cross-tenant access denied",
         )
 
-    return {
-        "resource_id": resource.resource_id,
-        "tenant_id": resource.tenant_id,
-        "name": resource.name,
-    }
+    return resource
