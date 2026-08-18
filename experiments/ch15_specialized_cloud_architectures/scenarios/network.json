@@ -1,0 +1,36 @@
+{
+    "switches": [
+        {
+            "switch_id": "switch-001",
+            "name": "application-switch",
+            "connected_resources": [
+                "vm-001",
+                "vm-002"
+            ]
+        },
+        {
+            "switch_id": "switch-002",
+            "name": "storage-switch",
+            "connected_resources": [
+                "vm-001",
+                "storage-001"
+            ]
+        }
+    ],
+    "paths": [
+        {
+            "path_id": "path-001",
+            "source_id": "vm-001",
+            "target_id": "storage-001",
+            "connection_type": "network",
+            "status": "active"
+        },
+        {
+            "path_id": "path-002",
+            "source_id": "vm-001",
+            "target_id": "storage-001",
+            "connection_type": "network",
+            "status": "active"
+        }
+    ]
+}
